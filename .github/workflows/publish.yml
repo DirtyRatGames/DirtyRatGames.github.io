@@ -32,15 +32,6 @@ jobs:
       - name: Build with Next.js 🏗️
         run: NEXT_CONFIG_FILE=next.config.ts pnpm build
 
-      - name: Verify output directory
-        run: ls -la
-
-      - name: Inspect Mystery File
-        run: cat next.config.js
-
-      - name: Verify output directory pt 2
-        run: ls -la out/
-
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
