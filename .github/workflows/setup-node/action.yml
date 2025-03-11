@@ -10,6 +10,7 @@ runs:
         cache: "pnpm"
 
     - name: Install pnpm
+      shell: bash
       run: corepack enable && corepack prepare pnpm@latest --activate
 
     - name: Cache pnpm store ⚡
@@ -22,9 +23,11 @@ runs:
           pnpm-store-${{ runner.os }}-
 
     - name: Verify output directory
+      shell: bash
       run: ls -la # Debugging step
 
     - name: Verify output directory pt 2
+      shell: bash
       run: ls -la out/ # Debugging step
 
     - name: Install dependencies 🔧
