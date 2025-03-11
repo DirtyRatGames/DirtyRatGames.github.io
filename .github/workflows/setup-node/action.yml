@@ -10,7 +10,7 @@ runs:
         cache: "pnpm"
 
     - name: Install pnpm
-        run: corepack enable && corepack prepare pnpm@latest --activate
+      run: corepack enable && corepack prepare pnpm@latest --activate
 
     - name: Cache pnpm store ⚡
       id: cache_pnpm
