@@ -30,10 +30,13 @@ jobs:
           static_site_generator: next
 
       - name: Build with Next.js 🏗️
-        run: pnpm build
+        run: NEXT_CONFIG_FILE=next.config.ts pnpm build
 
       - name: Verify output directory
         run: ls -la
+
+      - name: Inspect Mystery File
+        run: cat next.config.js
 
       - name: Verify output directory pt 2
         run: ls -la out/
