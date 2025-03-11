@@ -19,13 +19,13 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/setup-node
 
       - name: Setup Pages ⚙️
-        uses: actions/configure-pages
+        uses: actions/configure-pages@v4
         with:
           static_site_generator: next
 
@@ -33,9 +33,9 @@ jobs:
         run: npx next build
 
       - name: Upload artifact 📡
-        uses: actions/upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: out/
 
   deploy:
     environment:
@@ -48,4 +48,4 @@ jobs:
     steps:
       - name: Publish to GitHub Pages 🚀
         id: deployment
-        uses: actions/deploy-pages
+        uses: actions/deploy-pages@v4
