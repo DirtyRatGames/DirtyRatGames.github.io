@@ -1,5 +1,5 @@
 name: setup-node
-description: "Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧"
+description: "⚙️ Setup Node.js & PNPM ⚡🔧"
 runs:
   using: "composite"
   steps:
@@ -9,28 +9,7 @@ runs:
         node-version: 20
         cache: "pnpm"
 
-    - name: Install pnpm
-      shell: bash
-      run: corepack enable && corepack prepare pnpm@latest --activate
-
-    - name: Cache pnpm store ⚡
-      id: cache_pnpm
-      uses: actions/cache@v3
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
       with:
-        path: ~/.pnpm-store
-        key: pnpm-store-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-        restore-keys: |
-          pnpm-store-${{ runner.os }}-
-
-    - name: Verify output directory
-      shell: bash
-      run: ls -la # Debugging step
-
-    - name: Verify output directory pt 2
-      shell: bash
-      run: ls -la out/ # Debugging step
-
-    - name: Install dependencies 🔧
-      shell: bash
-      if: steps.cache_dependencies.outputs.cache-hit != 'true'
-      run: pnpm install
+        version: latest
