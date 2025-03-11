@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
    * Enable static exports for GitHub Pages
    */
   output: "export",
-  distDir: "out",
 
   /**
    * Set base path and asset prefix for GitHub Pages
@@ -19,9 +18,9 @@ const nextConfig: NextConfig = {
   /**
    * Disable server-based image optimization since it's incompatible with static exports
    */
-  images: {
-    unoptimized: true,
-  },
+  // images: {
+  //   unoptimized: true,
+  // },
 };
 
 export default nextConfig;
