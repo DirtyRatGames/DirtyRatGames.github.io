@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const assetPrefix = "";
-const basePath = "/";
+const basePath = "";
 
 const nextConfig: NextConfig = {
   /**
