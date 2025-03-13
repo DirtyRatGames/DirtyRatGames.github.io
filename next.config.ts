@@ -18,9 +18,9 @@ const nextConfig: NextConfig = {
   /**
    * Disable server-based image optimization since it's incompatible with static exports
    */
-  // images: {
-  //   unoptimized: true,
-  // },
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

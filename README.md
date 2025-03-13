@@ -44,6 +44,6 @@ GitHub Actions handles deployment through two actions:
 
 1. It declares a composite action. The composite action allows you to bundle multiple workflow steps into a single action, combining multiple run commands into a single reusable action.
 2. It creates a new build environment and sets up Node.js 20 there.
-3. It installs npm dependencies and uses a caching mechanism to speed up this process.
+3. It installs pnpm and project dependencies.
 
 The workflow runs automatically when changes are pushed to the main branch. You can see the deployment status and workflow details in the "Actions" tab of the repository.

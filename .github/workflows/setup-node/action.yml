@@ -1,5 +1,5 @@
 name: setup-node
-description: "⚙️ Setup Node.js & PNPM ⚡🔧"
+description: "Setup Node.js ⚙️ - Setup pnpm ⚡ - Install dependencies 🔧"
 runs:
   using: "composite"
   steps:
