@@ -36,14 +36,14 @@ GitHub Actions handles deployment through two actions:
 
 ### Publish
 
-1. This action is executed when code is pushed or merged into the main branch.
-2. It uses the setup-node action to set up the environment.
-3. The action has two stages: in the first stage, the Next.js app is bundled. In the second stage, we upload the artifacts from the first stage to GitHub Pages.
+- This action is executed when code is pushed or merged into the main branch.
+- It uses the setup-node action to set up the environment.
+- The action has two stages: in the first stage, the Next.js app is bundled. In the second stage, we upload the artifacts from the first stage to GitHub Pages.
 
 ### Setup-node
 
-1. It declares a composite action. The composite action allows you to bundle multiple workflow steps into a single action, combining multiple run commands into a single reusable action.
-2. It creates a new build environment and sets up Node.js 20 there.
-3. It installs pnpm and project dependencies.
+- It declares a composite action. The composite action allows you to bundle multiple workflow steps into a single action, combining multiple run commands into a single reusable action.
+- It creates a new build environment and sets up Node.js 20 there.
+- It installs pnpm and project dependencies.
 
 The workflow runs automatically when changes are pushed to the main branch. You can see the deployment status and workflow details in the "Actions" tab of the repository.
